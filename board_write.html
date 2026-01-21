@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KH</title>
-    <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./layout.css">
-    <script defter src="./index.js" ></script>
+    <link rel="stylesheet" href="./board_write.css">
+    <script src="./board_write.js" defter></script>
 </head>
 <body>
     <header>
@@ -21,7 +21,16 @@
         <a href="">문의게시판</a>
     </nav>
     <main>
-        <h1>홈페이지</h1>
+        <h1>게시글 작성</h1>
+        <hr>
+        <form action="게시글작성처리" onsubmit="return false">
+            <input type="text" name="title" placeholder="제목">
+            <br>
+            <textarea name="content" placeholder="내용"></textarea>
+            <br>
+            <input type="submit" value="작성하기" onclick="insertBoard()">
+        </form>
+
     </main>
 </body>
 </html>
