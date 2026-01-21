@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>푸키먼</title>
+    <link rel="stylesheet" href="../layout.css">
+    <link rel="stylesheet" href="../make.css">
+    <script defter src="./make.js" ></script>
+</head>
+<body>
+    <header>
+        <h1><a href="./index.html">나만의 포켓몬 만들기</a></h1>
+    </header>
+    <nav>
+        <div>
+            <a href="../list/list.html">포켓몬 리스트</a>
+        </div>
+        <div>
+            <a href="../make/make.html">포켓몬 만들기</a>
+        </div>
+    </nav>
+    <main>
+        <h1>제작</h1>
+        <form action="게시글작성처리" onsubmit="return false">
+            <input type="text" name="name" placeholder="이름">
+            <br>
+            <input type="text" name="chara" placeholder="특성">
+            <br>
+            <div id="typeInputCheckboxDiv">
+                <div class="checkbox">노말<input type="checkbox" name="check" value="노말" onclick="countCheck(this)"></div>
+                <div class="checkbox">불꽃<input type="checkbox" name="check" value="불꽃" onclick="countCheck(this)"></div>
+                <div class="checkbox">물<input type="checkbox" name="check" value="물" onclick="countCheck(this)"></div>
+                <div class="checkbox">풀<input type="checkbox" name="check" value="풀" onclick="countCheck(this)"></div>
+                <div class="checkbox">전기<input type="checkbox" name="check" value="전기" onclick="countCheck(this)"></div>
+                <div class="checkbox">얼음<input type="checkbox" name="check" value="얼음" onclick="countCheck(this)"></div>
+                
+            </div>
+            <input type="submit" value="작성하기" onclick="insertBoard()">
+        </form>
+    </main>
+</body>
+</html>

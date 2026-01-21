@@ -1,5 +1,4 @@
-//테이블 태그 내부에 데이터 넣기
-function displayVoList(){
+function displayPoList(){
     const boardVoList = JSON.parse(localStorage.getItem("boardVoList"));
     if(!boardVoList){
         return;
@@ -9,9 +8,9 @@ function displayVoList(){
         const vo = boardVoList[i];
         str += `
             <tr>
-                <th><a href="./board_detail.html" onclick="setBoardNo(${i})"> ${i} </a></th>
+                <th> ${i} </th>
                 <td> ${vo.title} </td>
-                <td> 비고 </td>
+                <td><button onclick="">수정 밑 상세보기</button></td>
             </tr>
         `;
     }
@@ -21,10 +20,11 @@ function displayVoList(){
 
 }
 
-function setBoardNo(no){
-    localStorage.setItem("selectedBoardNo", no)
+function setPoNo(no){
+    localStorage.setItem("selectedPoNo", no);
+    location.href="./edit.html";
 }
 
 window.onload = function(){
-    displayVoList();
+    displayPoList();
 }
