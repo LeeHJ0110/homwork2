@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>푸키먼</title>
     <link rel="stylesheet" href="../layout.css">
-    <link rel="stylesheet" href="../make.css">
+    <link rel="stylesheet" href="./make.css">
     <script defter src="./make.js" ></script>
 </head>
 <body>
     <header>
-        <h1><a href="./index.html">나만의 포켓몬 만들기</a></h1>
+        <h1><a href="../index.html">나만의 포켓몬 만들기</a></h1>
     </header>
     <nav>
         <div>
             <a href="../list/list.html">포켓몬 리스트</a>
         </div>
         <div>
-            <a href="../make/make.html">포켓몬 만들기</a>
+            <a href="../make/make.html" onclick="localStorage.setItem('selectedPoNo', -1)">포켓몬 만들기</a>
         </div>
     </nav>
     <main>
@@ -34,6 +34,18 @@
                 <div class="checkbox">풀<input type="checkbox" name="check" value="풀" onclick="countCheck(this)"></div>
                 <div class="checkbox">전기<input type="checkbox" name="check" value="전기" onclick="countCheck(this)"></div>
                 <div class="checkbox">얼음<input type="checkbox" name="check" value="얼음" onclick="countCheck(this)"></div>
+                <div class="checkbox">격투<input type="checkbox" name="check" value="격투" onclick="countCheck(this)"></div>
+                <div class="checkbox">독<input type="checkbox" name="check" value="독" onclick="countCheck(this)"></div>
+                <div class="checkbox">땅<input type="checkbox" name="check" value="땅" onclick="countCheck(this)"></div>
+                <div class="checkbox">비행<input type="checkbox" name="check" value="비행" onclick="countCheck(this)"></div>
+                <div class="checkbox">에스퍼<input type="checkbox" name="check" value="에스퍼" onclick="countCheck(this)"></div>
+                <div class="checkbox">벌레<input type="checkbox" name="check" value="벌레" onclick="countCheck(this)"></div>
+                <div class="checkbox">바위<input type="checkbox" name="check" value="바위" onclick="countCheck(this)"></div>
+                <div class="checkbox">고스트<input type="checkbox" name="check" value="고스트" onclick="countCheck(this)"></div>
+                <div class="checkbox">드래곤<input type="checkbox" name="check" value="드래곤" onclick="countCheck(this)"></div>
+                <div class="checkbox">악<input type="checkbox" name="check" value="악" onclick="countCheck(this)"></div>
+                <div class="checkbox">강철<input type="checkbox" name="check" value="강철" onclick="countCheck(this)"></div>
+                <div class="checkbox">페어리<input type="checkbox" name="check" value="페어리" onclick="countCheck(this)"></div>
                 
             </div>
             <input type="submit" value="작성하기" onclick="insertBoard()">
